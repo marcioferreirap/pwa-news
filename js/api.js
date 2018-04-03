@@ -94,34 +94,31 @@
 
     function getNewsHtml(article) {
 
-        var card = $('<div>').addClass('card col-12 col-sm-2 col-md-3 col-xl-3');
+        var card = $('<div>').addClass('card col s12 m6 l3');
 
         card = addImage(card);
-        card = addBodyTitle(card);
-        card = addBodyActions(card);
+        //card = addBodyTitle(card);
+        card = addBodyContent(card);
+        //card = addBodyActions(card);
 
         return card;
 
         function addImage(card) {
             if (article.urlToImage) {
                 return card.append(
-                    $('<img>')
-                        .attr('src', article.urlToImage)
-                        .attr('alt', article.title)
-                        .addClass('card-img-top')
-                );
+                    $('<card-image>').append(
+                        $('<img>').attr('src', article.urlToImage),
+                        $('<span>').addClass('span').append(article.title).addClass('flow-text')
+                ));
             }
             return card;
         }
 
-        function addBodyTitle(card) {
+        function addBodyContent(card) {
             return card.append(
-                $('<div>')
-                    .addClass('card-body')
-                    .append($('<h5>').addClass('card-title').append(article.title))
-                    .append($('<h6>').addClass('card-subtitle mb-2 text-muted')
-                        .append(moment(article.publishedAt).fromNow()))
-                    .append($('<p>').addClass('card-text').append(article.description))
+                $('<card-content>')
+                    .append($('<h6>').addClass('flow-text').append(moment(article.publishedAt).fromNow()))
+                    .append($('<p>').append(article.description).addClass('flow-text'))
             );
         }
 
