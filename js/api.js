@@ -108,7 +108,7 @@
                 return card.append(
                     $('<card-image>').append(
                         $('<img>').attr('src', article.urlToImage),
-                        $('<span>').addClass('span').append(article.title).addClass('flow-text')
+                        $('<span>').addClass('span').append(article.title)
                 ));
             }
             return card;
@@ -117,8 +117,8 @@
         function addBodyContent(card) {
             return card.append(
                 $('<card-content>')
-                    .append($('<h6>').addClass('flow-text').append(moment(article.publishedAt).fromNow()))
-                    .append($('<p>').append(article.description).addClass('flow-text'))
+                    .append($('<h6>').append(moment(article.publishedAt).fromNow()))
+                    .append($('<p>').append(article.description))
             );
         }
 
