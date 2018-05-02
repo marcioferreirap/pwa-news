@@ -108,7 +108,8 @@
                 return card.append(
                     $('<card-image>').append(
                         $('<img>').attr('src', article.urlToImage),
-                        $('<span>').addClass('span').append(article.title)
+                        $('<span>').addClass('card-title').append(article.title),
+                        $('<a>').addClass('btn-floating halfway-fab waves-effect waves-light red').append($('<i>').addClass('material-icons').append('add'))
                 ));
             }
             return card;
