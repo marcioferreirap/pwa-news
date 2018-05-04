@@ -6,12 +6,12 @@
     var API = 'https://newsapi.org/v2/';
     var filesToCache = [
         '/',
-        '/css/materialize.css',
-        '/css/materialize.min.css',
         '/css/main.css',
         '/js/api.js',
-        '/js/materialize.js',
-        '/js/materialize.min.js',
+        '/js/geolocation.js',
+        '/js/install.js',
+        '/js/sw-push.js',
+        '/js/vibrate.js',
         '/image/placeholder-image.png',
         '/library/jquery-3.3.1.min.js',
         '/library/moment.min.js'

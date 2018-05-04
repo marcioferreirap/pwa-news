@@ -109,7 +109,7 @@
                     $('<card-image>').append(
                         $('<img>').attr('src', article.urlToImage),
                         $('<span>').addClass('card-title').append(article.title),
-                        $('<a>').addClass('btn-floating halfway-fab waves-effect waves-light red').append($('<i>').addClass('material-icons').append('add'))
+                        $('<a>').addClass('btn-floating halfway-fab waves-effect waves-light theme-dark-blue').append($('<i>').addClass('material-icons').append('add'))
                 ));
             }
             return card;
@@ -127,7 +127,7 @@
             return card.append(
                 $('<div>')
                     .addClass('card-body')
-                    .append($('<button>').append('Read Article').addClass('btn btn-link').attr('type', 'button'))
+                    .append($('<button>').append('Read Article').addClass('btn btn-link theme-dark-blue ').attr('type', 'button'))
                     .click(function () {
                         window.open(article.url, '_blank');
                     })

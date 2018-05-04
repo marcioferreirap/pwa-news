@@ -16,16 +16,16 @@
     <meta name="msapplication-TileColor" content="#b91d47">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     
 </head>
 <body>
 <nav>
-    <div class="nav-wrapper red darken-4">
-        <a href="#" class="brand-logo">PWA NEWS<i class="material-icons" onclick="vibrateSimple()">vibration</i></a>
+    <div class="nav-wrapper theme-dark-blue">
+        <a href="#" class="brand-logo theme-blanch">PWA NEWS<i class="material-icons theme-blanch" onclick="vibrateSimple()">vibration</i></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <i class="material-icons hidden" id="install-app">file_download</i>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down theme-blanch">
             <li><a href="#" id="headline">Headline</a></li>
             <li><a href="#" id="health">Health</a></li>
             <li><a href="#" id="sports">Sports</a></li>
@@ -45,13 +45,13 @@
     </div>
 </nav>
 
-<ul class="sidenav" id="mobile-demo">
-    <li><a href="#" id="headline">Headline</a></li>
-    <li><a href="#" id="health">Health</a></li>
-    <li><a href="#" id="sports">Sports</a></li>
-    <li><a href="#" id="entertainment">Entertainment</a></li>
-    <li><a href="#" id="technology">Technology</a></li>
-    <li>&nbsp;&nbsp;<button class="waves-effect waves-light btn-small red darken-4" id="askButton"><i class="material-icons left">location_searching</i>Verificar localização</button></li>
+<ul class="sidenav theme-blanch" id="mobile-demo">
+    <li><a href="#" id="m-headline">Headline</a></li>
+    <li><a href="#" id="m-health">Health</a></li>
+    <li><a href="#" id="m-sports">Sports</a></li>
+    <li><a href="#" id="m-entertainment">Entertainment</a></li>
+    <li><a href="#" id="m-technology">Technology</a></li>
+    <li>&nbsp;&nbsp;<button class="waves-effect waves-light btn-small theme-dark-blue" id="askButton"><i class="material-icons left theme-blanch">location_searching</i><span class="theme-blanch">localização</span></span></button></li>
     <li><div id="target"></div></li>
 </ul>
 
@@ -62,24 +62,21 @@
     </section>
 
 <footer>
-    <p>PWA NEWS - Version: 3.0.1</p>
 </footer>
 
 <script src="library/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
         integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="library/moment.min.js"></script>
 
 <script src="js/api.js"></script>
 <script src="js/sw-push.js"></script>
 <script src="js/vibrate.js"></script>
 <script src="js/geolocation.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/install.js"></script>
+<script src="js/install.js"></script>
 
 <script>
     if ('serviceWorker' in navigator) {

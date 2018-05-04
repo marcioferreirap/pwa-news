@@ -6,9 +6,16 @@ footer {
     border-top: .05rem solid #e5e5e5;
 }
 
-header {
-    line-height: 1;
-    border-bottom: 1px solid #e5e5e5;
+.theme-dark-blue {
+    background-color:#294251 !important;
+}
+
+.theme-blanch {
+    color:#fff1cd !important;
+}
+
+.material-icons {
+    color:#fff1cd !important;
 }
 
 .header-logo {
@@ -42,3 +49,4 @@ button {
 .hidden {
     visibility: hidden;
 }
+
