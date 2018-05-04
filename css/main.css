@@ -38,3 +38,7 @@ img {
 button {
     cursor: pointer;
 }
+
+.hidden {
+    visibility: hidden;
+}

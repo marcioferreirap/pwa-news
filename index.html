@@ -22,9 +22,9 @@
 <body>
 <nav>
     <div class="nav-wrapper red darken-4">
-        <a href="#" class="brand-logo"><i class="material-icons">&nbsp public</i>PWA NEWS</a>
+        <a href="#" class="brand-logo">PWA NEWS<i class="material-icons" onclick="vibrateSimple()">vibration</i></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <i class="material-icons hidden" id="install-app" >file_download</i>
+        <i class="material-icons hidden" id="install-app">file_download</i>
         <ul class="right hide-on-med-and-down">
             <li><a href="#" id="headline">Headline</a></li>
             <li><a href="#" id="health">Health</a></li>
@@ -51,6 +51,8 @@
     <li><a href="#" id="sports">Sports</a></li>
     <li><a href="#" id="entertainment">Entertainment</a></li>
     <li><a href="#" id="technology">Technology</a></li>
+    <li>&nbsp;&nbsp;<button class="waves-effect waves-light btn-small red darken-4" id="askButton"><i class="material-icons left">location_searching</i>Verificar localização</button></li>
+    <li><div id="target"></div></li>
 </ul>
 
     <section>
@@ -73,6 +75,9 @@
 <script src="library/moment.min.js"></script>
 
 <script src="js/api.js"></script>
+<script src="js/sw-push.js"></script>
+<script src="js/vibrate.js"></script>
+<script src="js/geolocation.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/install.js"></script>
 

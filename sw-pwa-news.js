@@ -68,4 +68,22 @@
       );
     }
   });
+
+
+  self.addEventListener('push', function (e) {
+    console.log('[Service Worker] Push Received.');
+    console.log(`[Service Worker] Push had this data: "${e.data.text()}"`);
+
+    const title = 'Push PWA News';
+    const options = {
+      body: e.data.text(),
+      icon: '/img/android-chrome-512x512.png',
+      badge: '/img/android-chrome-512x512.png'
+    };
+    e.waitUntil(
+      self.registration.showNotification(title, options)
+    );
+  });
+
+
 }());
